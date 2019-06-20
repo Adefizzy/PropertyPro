@@ -7,25 +7,98 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" href="./images/logo.png" />
 
     <title>PropertyPro</title>
   </head>
   <body>
-    <div id="container">
-      <div id="navigation">
-        <nav id="navBar">
-          <div id="logo">
-            <span>PropertyPro</span>
-          </div>
-          <ul>
-            <li><a href="#">Post an ad</a></li>
-            <li><a href="#">Browse Properties</a></li>
-          </ul>
-        </nav>
+    <!-- the header with the navigation menu -->
+    <header id="navigation">
+      <nav id="navBar">
+        <div id="logo">
+          <span>PropertyPro</span>
+        </div>
+        <ul>
+          <li><a href="./login.html">Post an ad</a></li>
+          <li><a href="#">Browse Properties</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="container">
+      <!-- Button to display the filter menu when clicked -->
+      <div id="filter">
+        <p>
+          Filter search
+        </p>
+        <span id="arrow" class="arrow_up"
+          ><i class="fas fa-angle-down"></i
+        ></span>
       </div>
-      <section id="homePage"></section>
-    </div>
+      <!-- Drop down menu with form -->
+      <div id="filter_drop_down" class="hide_content">
+        <form id="filter_dropdown_form">
+          <div id="form_sections">
+            <div id="room_category">
+              <p>Category</p>
+              <label class=""
+                ><input type="checkbox" name="room_category" value="for_rent" />
+                For rent</label
+              >
+              <br />
+              <label
+                ><input type="checkbox" name="room_category" value="for_sale" />
+                For sale</label
+              >
+            </div>
+
+            <div id="room_price">
+              <p>Price</p>
+              <div class="input_align">
+                <label class="input_text_label">Min</label>
+                <input type="text" name="min_price" />
+              </div>
+              <div class="input_align">
+                <label class="input_text_label">Max</label>
+                <input type="text" name="min_price" />
+              </div>
+            </div>
+            <div id="room_type">
+              <label>
+                Property type
+                <select class="gap">
+                  <option value="null" selected>select property type</option>
+                  <option value="apartment">apartment</option>
+                  <option value="standard_flat">Standard flat</option>
+                  <option value="mini_flat">Mini flat</option>
+                </select>
+              </label>
+              <br />
+              <label>
+                Number of rooms
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div id="button_div">
+            <button id="filter_submit" class="submit_button">search</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
