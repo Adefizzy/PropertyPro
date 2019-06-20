@@ -1,3 +1,4 @@
+/* GLOBAL */
 * {
   box-sizing: border-box;
 }
@@ -6,14 +7,151 @@
   --secondary-color: #ffc8cd;
   --text-color: #b3b3b3;
 }
+.hide_content {
+  display: none;
+}
+
+.center_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gap {
+  margin-bottom: 30px;
+}
+.submit_button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0 10px 10px 0 rgba(192, 192, 192, 0.9);
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  box-shadow: none;
+}
 body {
-  padding: 0;
-  margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   scroll-behavior: smooth;
+  background-color: #f6f5f6;
+}
+body,
+p {
+  padding: 0;
+  margin: 0;
 }
 #container {
+  color: rgb(41, 40, 40);
+  margin-top: 60px;
+}
+#filter {
+  background-color: #fff;
+  padding: 5px 0 5px 40px;
+  font-weight: 400;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#arrow {
+  margin-left: 10px;
+  /* font-size: 1px; */
+}
+.arrow_down {
+  animation-name: arrow_down;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+.arrow_up {
+  animation-name: arrow_up;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow_up {
+  0% {
+    transform: rotate(225deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+
+  50% {
+    transform: rotate(315deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow_down {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+/* filter drop down menu div */
+#filter_drop_down {
+  width: 90%;
+  height: 40vh;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 10px 10px 0 rgba(192, 192, 192, 0.9);
+}
+#filter_dropdown_form {
+  width: 90%;
+  margin: 0 auto;
+}
+#form_sections {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  justify-content: space-around;
+  /* border: 1px solid darkblue; */
+  padding-top: 20px;
+}
+#form_sections p {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.input_align {
+  display: flex;
+  margin-bottom: 10px;
+}
+.input_text_label {
+  min-width: 50px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+input[type="text"] {
+  padding: 6px;
+  width: 100%;
+}
+
+select {
+  padding: 8px;
+  margin-left: 10px;
+}
+
+#button_div {
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  margin: 0 auto;
 }
 
 /* Navigation div consisting of company logo anf nav bar */
@@ -26,6 +164,9 @@ body {
 #navigation {
   background-color: var(--primary-color, #009873);
   max-height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 #navBar {
   width: 90%;
@@ -64,11 +205,11 @@ li a:hover {
   text-shadow: 4px 2px #007952;
 }
 
-/* Home Page */
+/* Login*/
 
-#homePage {
-  height: 91vh;
-  background-image: url("./images/chen-dairui-257848-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+#login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
