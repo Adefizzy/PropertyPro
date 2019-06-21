@@ -26,7 +26,7 @@
           <span>PropertyPro</span>
         </div>
         <ul>
-          <li><a href="./login.html" class="post_ad">Post an ad</a></li>
+          <li><a href="#" class="post_ad">Post an ad</a></li>
           <li><a href="#">Browse Properties</a></li>
         </ul>
       </nav>
@@ -56,11 +56,48 @@
             <p class="cursor">Forgot Password?</p>
           </div>
         </form>
-        <p class="cursor">Sign Up</p>
+        <p class="cursor" id="signup_page_link">Sign Up</p>
       </article>
-      
+      <article id="signup_page" class="center_content hide_content">
+        <form action="" id="signup_form">
+          <h3>Register as an agent</h3>
+          <div class="gap">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              placeholder="Enter your First Name"
+              name="firstName"
+            />
+          </div>
+          <div class="gap">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              placeholder="Enter your Last Name"
+              name="lastName"
+            />
+          </div>
+          <div class="gap">
+            <label for="username">Email</label>
+            <input type="email" placeholder="Enter your Email" name="email" />
+          </div>
+          <div class="gap">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your Password"
+              name="password"
+            />
+          </div>
+          <div id="signup_button_div" class="button_div">
+            <button class="submit_button">submit</button>
+          </div>
+        </form>
+        <p class="cursor" id="signIn_page_link">Already an agent? Sign In</p>
+      </article>
     </main>
 
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./loginPage.js"></script>
   </body>
 </html>
