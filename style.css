@@ -2,6 +2,9 @@
 * {
   box-sizing: border-box;
 }
+.cursor {
+  cursor: pointer;
+}
 :root {
   --primary-color: #009873;
   --secondary-color: #ffc8cd;
@@ -9,7 +12,7 @@
   --box-shadow: 0 10px 10px 0 rgba(192, 192, 192, 0.9);
 }
 .hide_content {
-  display: none;
+  display: none !important;
 }
 
 .center_content {
@@ -20,12 +23,20 @@
 .gap {
   margin-bottom: 30px;
 }
+
+.button_div {
+  display: flex;
+  justify-content: flex-end;
+  width: 85%;
+  margin: 0 auto;
+}
+
 .submit_button {
-  padding: 10px;
+  padding: 5px 10px 5px 10px;
   background-color: var(--primary-color);
   color: #fff;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   box-shadow: 0 10px 10px 0 rgba(192, 192, 192, 0.9);
   cursor: pointer;
@@ -34,6 +45,14 @@
 .submit_button:hover {
   box-shadow: none;
 }
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #cccccc;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -138,21 +157,10 @@ p {
   display: flex;
   align-items: center;
 }
-input[type="text"] {
-  padding: 6px;
-  width: 100%;
-}
 
 select {
   padding: 8px;
   margin-left: 10px;
-}
-
-#button_div {
-  display: flex;
-  justify-content: flex-end;
-  width: 85%;
-  margin: 0 auto;
 }
 
 /* Navigation div consisting of company logo anf nav bar */
@@ -239,6 +247,32 @@ img {
   max-height: auto;
   display: block;
   padding-bottom: 5%;
+}
+
+/* LOGIN PAGE */
+
+#login_page_container {
+  width: 100%;
+  height: 100vh;
+  /* background-color: #dd45de; */
+}
+
+#login_page {
+  /* background-color: #007952; */
+  min-height: 50vh;
+  max-width: 50%;
+  box-shadow: var(--box-shadow);
+  padding: 0 20px 20px 20px;
+  flex-direction: column;
+}
+
+#login_button_div {
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#login_button_div p {
+  font-size: 12px;
 }
 
 @media screen and (min-width: 800px) {
