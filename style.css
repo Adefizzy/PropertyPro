@@ -47,7 +47,8 @@
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   padding: 10px;
   width: 100%;
   border: 1px solid #cccccc;
@@ -257,7 +258,8 @@ img {
   /* background-color: #dd45de; */
 }
 
-#login_page {
+#login_page,
+#signup_page {
   /* background-color: #007952; */
   min-height: 50vh;
   max-width: 50%;
@@ -266,7 +268,8 @@ img {
   flex-direction: column;
 }
 
-#login_button_div {
+#login_button_div,
+#signup_button_div {
   justify-content: space-between;
   width: 100%;
   flex-wrap: wrap;
